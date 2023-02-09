@@ -112,27 +112,27 @@
     <script>
       
       const form = document.querySelector("form");
-      const tweet = document.querySelector("textarea[name='tweet']");
-      const feed = document.querySelector("#tweet-feed");
+      const postup = document.querySelector("textarea[name='postup']");
+      const feed = document.querySelector("#postup-feed");
     
       form.addEventListener("submit", function(event) {
         event.preventDefault();
         const li = document.createElement("li");
-        li.textContent = tweet.value;
+        li.textContent = postup.value;
         feed.appendChild(li);
-        tweet.value = "";
+        postup.value = "";
       });
     </script>
     
 
     <header>
       <h1>NetUp</h1>
-      <a href="#tweet-feed" class="header-btn">Feed</a>
+      <a href="#postup-feed" class="header-btn">Feed</a>
     </header>
 
     <main>
       <form action="">
-        <textarea name="tweet" rows="5" cols="50"></textarea>
+        <textarea name="postup" rows="5" cols="50"></textarea>
         <button type="submit">Up</button>
       </form>
       <hr>
