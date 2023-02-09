@@ -4,6 +4,9 @@
     <title>NetUp</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
     <style>
       * {
         box-sizing: border-box;
@@ -99,12 +102,33 @@
         text-align: center;
       }
     </style>
+
+
+
   </head>
   <body>
+
+
+    <script>
+      const form = document.querySelector("form");
+      const tweet = document.querySelector("textarea[name='tweet']");
+      const feed = document.querySelector("#tweet-feed");
+    
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+        const li = document.createElement("li");
+        li.textContent = tweet.value;
+        feed.appendChild(li);
+        tweet.value = "";
+      });
+    </script>
+    
+
     <header>
       <h1>NetUp</h1>
       <a href="#tweet-feed" class="header-btn">Feed</a>
     </header>
+    
     <main>
       <form action="">
         <textarea name="tweet" rows="5" cols="50"></textarea>
