@@ -110,6 +110,13 @@
 
 
     <script>
+
+const feedBtn = document.querySelector(".header-btn");
+
+feedBtn.addEventListener("click", function() {
+  feed.style.display = feed.style.display === "none" ? "block" : "none";
+});
+
       const form = document.querySelector("form");
       const tweet = document.querySelector("textarea[name='tweet']");
       const feed = document.querySelector("#tweet-feed");
@@ -128,7 +135,7 @@
       <h1>NetUp</h1>
       <a href="#tweet-feed" class="header-btn">Feed</a>
     </header>
-    
+
     <main>
       <form action="">
         <textarea name="tweet" rows="5" cols="50"></textarea>
