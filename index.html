@@ -8,7 +8,7 @@
 
 
     <style>
-      * {
+            * {
         box-sizing: border-box;
       }
 
@@ -16,6 +16,8 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #E6ECF0;
+        transition: background-color 0.5s ease;
       }
 
       header {
@@ -101,6 +103,20 @@
         padding: 20px;
         text-align: center;
       }
+
+      .dark-mode {
+        background-color: #2C2F33;
+      }
+
+      .dark-mode textarea,
+      .dark-mode li,
+      .dark-mode form {
+        background-color: #42474A !important;
+        color: white !important;
+      }
+
+      .dark-mode
+      
     </style>
 
 
@@ -131,6 +147,15 @@
     </header>
 
     <main>
+
+      <section id="postup-feed">
+        <h2>PostUp Feed</h2>
+        <ul>
+          <!-- Hier werden die Nachrichten angezeigt -->
+        </ul>
+      </section>
+      
+
       <form action="">
         <textarea name="postup" rows="5" cols="50"></textarea>
         <button type="submit">Up</button>
