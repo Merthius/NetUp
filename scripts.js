@@ -1,3 +1,12 @@
+const menuIcon = document.querySelector(".menu-icon");
+const sideMenu = document.querySelector(".side-menu");
+
+menuIcon.addEventListener("click", function() {
+  document.body.classList.toggle("show-side-menu");
+});
+
+
+
 document.addEventListener("DOMContentLoaded", function(){
   const feed = document.querySelector("#postup-feed");
   const feedButton = document.querySelector(".header-btn");

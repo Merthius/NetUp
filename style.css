@@ -1,6 +1,26 @@
-.feed-button {
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-icon-line {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+
+.side-menu {
+  display: none;
+}
+
+.show-side-menu .side-menu {
   display: block;
-  margin: 0 auto;
 }
 
 
