@@ -5,10 +5,76 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <button id="toggle-dark-mode" class="toggle-btn">
+      <span class="toggle-btn-inner"></span>
+      <span class="toggle-btn-switch"></span>
+    </button>
 
     <style>
-            * {
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    background-color: #ddd;
+    border-radius: 34px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-btn-inner {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background-color: #fff;
+    transition: all 0.3s;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+    left: 0;
+  }
+
+  .toggle-btn-switch {
+    display: block;
+    width: 26px;
+    height: 26px;
+    border-radius: 26px;
+    background-color: #19c583;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    transition: all 0.3s;
+    transform: translateX(0);
+  }
+
+  .dark-mode .toggle-btn-inner {
+    background-color: #444;
+  }
+
+  .dark-mode .toggle-btn-switch {
+    transform: translateX(26px);
+    background-color: #fff;
+  }
+
+  .dark-mode body {
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+
+<script>
+  const toggleBtn = document.querySelector("#toggle-dark-mode");
+  const body = document.querySelector("body");
+
+  toggleBtn.addEventListener("click", function() {
+    body.classList.toggle("dark-mode");
+  });
+
+
+      * {
         box-sizing: border-box;
       }
 
@@ -16,8 +82,6 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-color: #E6ECF0;
-        transition: background-color 0.5s ease;
       }
 
       header {
@@ -103,20 +167,6 @@
         padding: 20px;
         text-align: center;
       }
-
-      .dark-mode {
-        background-color: #2C2F33;
-      }
-
-      .dark-mode textarea,
-      .dark-mode li,
-      .dark-mode form {
-        background-color: #42474A !important;
-        color: white !important;
-      }
-
-      .dark-mode
-      
     </style>
 
 
@@ -148,14 +198,6 @@
 
     <main>
 
-      <section id="postup-feed">
-        <h2>PostUp Feed</h2>
-        <ul>
-          <!-- Hier werden die Nachrichten angezeigt -->
-        </ul>
-      </section>
-      
-
       <form action="">
         <textarea name="postup" rows="5" cols="50"></textarea>
         <button type="submit">Up</button>
@@ -163,3 +205,10 @@
       <hr>
       <section>
         <h2
+
+        <section id="postup-feed">
+          <h2>Feed</h2>
+          <ul>
+            <!-- Hier sollten die Nachrichten angezeigt werden -->
+          </ul>
+        </section>
