@@ -1,3 +1,19 @@
+document.addEventListener("DOMContentLoaded", function(){
+  const feed = document.querySelector("#postup-feed");
+  const feedButton = document.querySelector(".header-btn");
+
+  feed.style.display = "none";
+
+  feedButton.addEventListener("click", function(){
+    if (feed.style.display === "none") {
+      feed.style.display = "block";
+    } else {
+      feed.style.display = "none";
+    }
+  });
+});
+
+
 const toggleBtn = document.querySelector("#toggle-dark-mode");
   const body = document.querySelector("body");
 
