@@ -1,37 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
   <head>
-    <title>NetUp</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link rel="stylesheet" type="text/css" href="style.css">
-
-    
-
+    <title>NetUp</title>
+    <link rel="stylesheet" href="style.css">
   </head>
-
-
   <body>
-
-    <script src="scripts.js"></script>
-
     <header>
-
       <h1>NetUp</h1>
-
-      <button class="header-btn"></button>
-    
+      <a href="#chat-feed" class="header-btn">Feed</a>
     </header>
-
     <main>
-
-      <form action="">
-        <textarea name="postup" rows="5" cols="50"></textarea>
+      <form id="chat-form">
+        <textarea name="message" rows="5" cols="50" placeholder="Nachricht eingeben..."></textarea>
         <button type="submit">Up</button>
       </form>
-      
       <hr>
-      <section>
-        <h2
+      <section id="chat-feed">
+        <h2>Feed</h2>
+        <ul id="feed-list">
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2023 NetUp</p>
+    </footer>
+    <script src="scripts.js"></script>
+  </body>
+</html>
