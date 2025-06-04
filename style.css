@@ -8,6 +8,7 @@
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
+        background-color: #f5f5f5;
       }
 
       header {
@@ -70,7 +71,7 @@
         margin-bottom: 20px;
         padding: 10px;
         border-radius: 10px;
-        border: 2px solid 
+        border: 2px solid #19c583;
       }
 
       button {
@@ -91,6 +92,7 @@
       ul {
         list-style: none;
         padding: 0;
+        margin: 0 auto;
       }
 
       li {
